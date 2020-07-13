@@ -2,7 +2,7 @@
 Esboço do Tabelodromo
 
 
-limite:
+limite (DB de Parâmetros):
 	ID_Limite
 	segmento 			(Varejo, Uniclass, Personnalite, Private, EMP1)
 	canal 				(BKL, CEI, TCX, MBL, TEC, URA)
@@ -11,7 +11,7 @@ limite:
 	limite_diário
 	limite_semanal
 
-Operacao:
+Operacao (DB com as operações executadas, com status SIM (acatada) ou NAO):
 	agencia
 	conta
 	dac
@@ -23,7 +23,7 @@ Operacao:
 	ID_Limite
 	status_Operacao (Passou SIM/NAO)
 
-Controle:
+Controle (DB que controla por Agencia/Conta/ID_Limite os valores acumulados diários e semanais):
 	agencia
 	conta
 	dac
@@ -33,7 +33,7 @@ Controle:
 	Acumulado_Diario
 	Acumulado_Semanal
 
-Conta:
+Conta (DB de contas com vínculo ao DB de cliente):
 	agencia
 	conta
 	dac
@@ -41,7 +41,7 @@ Conta:
 	saldo
 	ID_Cliente 		
 
-Cliente:
+Cliente (DB de clientes):
 	ID_Cliente
 	Nome
 	Pessoa
